@@ -10,6 +10,10 @@ class JsonManager():
                                for category in self.categoriesSet}
     
     
+    def __str__(self) -> str:
+        return "JsonManager"
+    
+    
     #Este metodo es para poder ver una lista de todos los productos que hay en una lista
     def showProducts(self):
         print('\nEstos son los productos que tenemos nuestra tienda: \n')

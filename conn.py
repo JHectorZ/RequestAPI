@@ -12,15 +12,17 @@ def GetAPI():
     return data.json()
     
 
-#Aqui hacemos el llamado de la funcion para que nos regrese un JSON
-#Si hay un error en la peticion regresara un error
-
-try:
-    dataJson = GetAPI()
-except Exception as error:
-    print(error)
 
 
 if __name__ == '__main__':
+    #Aqui hacemos el llamado de la funcion para que nos regrese un JSON
+    #Si hay un error en la peticion regresara un error
+
+    try:
+        dataJson = GetAPI()
+    except Exception as error:
+        print(error)
+        
+    
     setJson = {i['category']['name'] for i in dataJson}
     print(setJson)
